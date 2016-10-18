@@ -1,14 +1,15 @@
-<div class="container-fluid">
+<div class="container">
   <div class="page-header">
+  	<%= link_to 'Back', episodes_path, :class=>"btn btn-success pull-right" %>
     <h3>Editing Episode</h3>
   </div><!-- page-header -->
 </div><!-- container-fluid -->
 
-<div class="container-fluid">
+<div class="container">
 	<%= render 'form' %>
 
-	<%= link_to 'Show', @episode %> |
-	<%= link_to 'Back', episodes_path %>
+	<!-- <%= link_to 'Show', @episode %> | -->
+	
 </div>
 
 

@@ -2,3 +2,151 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+@import 'https://fonts.googleapis.com/css?family=Arvo|Ceviche+One|Lato|Roboto|Ruslan+Display';
+
+body {
+  position: relative;
+}
+
+h2 {
+	font-family: 'Lato', sans-serif;
+	text-transform: uppercase;
+}
+
+h3 {
+	font-family: 'Lato', sans-serif;
+}
+
+.navbar-brand {
+	/*font-family: 'Ruslan Display', cursive;*/
+	/*font-family: 'Ceviche One', cursive;*/
+	/*font-family: "uppercut-angle";*/
+	/*font-family: "viktor-script";*/
+	/*font-family: "scriptorama-tradeshow-jf";*/
+	/*font-family: "bigfish";*/
+	font-family: "bello-pro";
+	font-weight: 400;
+	font-size: 34px;
+}
+
+.navbar-inverse .navbar-brand {
+	color: yellow;
+}
+
+.navbar-inverse {
+	margin-bottom: 0px;
+	border-radius: 0px;
+}
+
+.navbar-inverse li {
+	font-family: 'Lato', sans-serif;
+	text-transform: uppercase;
+}
+
+/*Jumbotron *************************************************/
+.jumbotron {
+	background-image: url('TEXTURE.jpg');
+	background-attachment: fixed;
+	text-align: center;
+	margin-bottom: 0;
+	padding-bottom: 70px;
+}
+
+.jumbotron h1 {
+	font-family: 'Arvo', serif;
+	/*font-size: 80px;*/
+	text-transform: uppercase;
+	margin-top: 70px;
+}
+
+.jumbotron p {
+	text-transform: uppercase;
+}
+
+
+.jumbo-intro h2 {
+	font-family: 'Lato', sans-serif;
+	font-size: 2em;
+	text-transform: uppercase;
+}
+
+.jumbotron .btn {
+	border-radius: 20px;
+	width: 160px;
+	padding: 8px 12px;
+	margin-right: 10px;
+	margin-left: 10px;
+	margin-top: 10px;
+}
+
+#btn-hello {
+	text-transform: uppercase;
+	background-color: black;
+	color: white;
+	border: none;
+}
+
+#btn-podcast {
+	text-transform: uppercase;
+	font-weight: 700;
+	background-color: transparent;
+	border: 1px solid black;
+}
+
+@media screen and (min-width: 768px) {
+    .jumbotron {
+        padding-top:48px;
+        padding-bottom: 48px
+    }
+
+    .container .jumbotron,.container-fluid .jumbotron {
+        padding-right: 60px;
+        padding-left: 60px
+    }
+
+    .jumbotron .h1,.jumbotron h1 {
+        font-size: 95px
+    }
+}
+
+/*Thumbnails section ********************************************/
+
+.page-header {
+	background: url('heading_divider.gif') no-repeat top left;
+	margin-top: 2.5em;
+	padding-top: .7em;
+	border-bottom: none;
+}
+
+.thumbnail {
+	border: none;
+}
+
+.btn-round {
+	border-radius: 20px;
+	width: 160px;
+	padding: 8px 12px;
+	margin-right: 10px;
+	margin-left: 10px;
+	margin-top: 10px;
+}
+
+.btn {
+	text-align: center;
+}
+
+.submit-bottom {
+	margin-bottom: 50px;
+}
+
+/*Hero ************************************************************/
+
+.hero-unit {
+    background-image:url('../img/hero_blur_2192x900.jpg');
+    background-size:cover;
+    margin-right: auto;
+    margin-left: auto;
+    background-color: #EEEEEE;
+    /*height:780px;*/
+  
+  }

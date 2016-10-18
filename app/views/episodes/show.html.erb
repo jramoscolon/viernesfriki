@@ -1,16 +1,17 @@
 <p id="notice"><%= notice %></p>
 
-<div class="container-fluid">
+<div class="container">
   <div class="page-header">
     <h3><%= @episode.name %></h3>
   </div><!-- page-header -->
 </div><!-- container-fluid -->
 
-<div class="container-fluid">
+<div class="container">
 	<div class="row">
 		<div class="col-md-6">
 			<h4>Notas de episodio</h4>
-			<p><%= Rinku.auto_link(@episode.description).html_safe %></p>
+			<!-- HTML_SAFE makes it possible to display html styled content within the the description field -->
+			<p><%= @episode.description.html_safe %></p>
 		</div><!-- descripcion -->
 
 		<div class="col-md-6">
@@ -19,7 +20,7 @@
 	</div><!-- row -->
 </div><!-- container-fluid -->
 
-<div class="container-fluid">
+<div class="container">
 	<ul class="list-inline">
 		<li><%= link_to 'Edit', edit_episode_path(@episode), :class=>"btn btn-primary" %></li>
 		<li><%= link_to 'Back', episodes_path, :class=>"btn btn-primary" %></li>

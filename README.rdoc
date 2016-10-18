@@ -1,7 +1,6 @@
 == README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This README includes notes on gems I used and things I discovered to make it work.
 
 Things you may want to cover:
 
@@ -9,7 +8,7 @@ Things you may want to cover:
 
 * System dependencies
 
-* Configuration
+* Configuration - I'm using the Ckeditor gem to include a rich text editor within the "Description" field in Episodes.
 
 * Database creation
 
