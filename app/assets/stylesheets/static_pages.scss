@@ -97,11 +97,19 @@ h3 {
 	border: none;
 }
 
+#btn-hello:hover {
+	background-color: rgba(0,0,0,0.7);
+}
+
 #btn-podcast {
 	text-transform: uppercase;
 	font-weight: 700;
 	background-color: transparent;
 	border: 1px solid black;
+}
+
+#btn-podcast:hover {
+	background-color: rgba(0,0,0,0.2);
 }
 
 @media screen and (min-width: 768px) {
@@ -142,12 +150,20 @@ h3 {
 	margin-top: 10px;
 }
 
+
+
 .btn-round2 {
 	border-radius: 20px;
 	width: 160px;
 	padding: 8px 12px;
 	margin-right: 10px;
 	margin-left: 10px;
+}
+
+.btn-round:hover {
+    color: #333;
+    background-color: none;
+    border-color: #adadad
 }
 
 .btn {
