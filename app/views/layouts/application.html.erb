@@ -27,6 +27,16 @@
 				</div><!-- navbar-header -->
 
 				<div class="navbar-collapse collapse">
+					<!-- Add a search field -->
+					<%= form_tag("/episodes", method: "get") do %>
+						<div class="navbar-form navbar-right" role="search">
+							<div class="form-group">
+								<!-- <%= label_tag(:q, "Search for:") %> -->
+								<%= text_field_tag :q, "", class: "form-control search-mod" %>
+								<%= submit_tag("Search", class: "form-control search-mod") %>
+							</div>
+						</div>
+					<% end %>
 					<ul class="nav navbar-nav navbar-right">
 						<li><a href="/">Inicio</a></li>
 						<li><a href="#team">El "Team"</a></li>

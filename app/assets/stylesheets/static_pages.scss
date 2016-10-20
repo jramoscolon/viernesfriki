@@ -17,6 +17,17 @@ h3 {
 	font-family: 'Lato', sans-serif;
 }
 
+/* Search field */
+
+.search-mod {
+	height: 34px;
+    font-size: 12px;
+    color: #555;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 15px;
+}
+
 .navbar-brand {
 	/*font-family: 'Ruslan Display', cursive;*/
 	/*font-family: 'Ceviche One', cursive;*/
@@ -111,14 +122,14 @@ h3 {
 
 /*Thumbnails section ********************************************/
 
-.page-header {
+.home-header {
 	background: url('heading_divider.gif') no-repeat top left;
 	margin-top: 2.5em;
 	padding-top: .7em;
 	border-bottom: none;
 }
 
-.thumbnail {
+#team .thumbnail {
 	border: none;
 }
 
@@ -129,6 +140,14 @@ h3 {
 	margin-right: 10px;
 	margin-left: 10px;
 	margin-top: 10px;
+}
+
+.btn-round2 {
+	border-radius: 20px;
+	width: 160px;
+	padding: 8px 12px;
+	margin-right: 10px;
+	margin-left: 10px;
 }
 
 .btn {

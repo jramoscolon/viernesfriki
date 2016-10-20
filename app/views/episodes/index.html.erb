@@ -3,7 +3,7 @@
 
 <div class="container-fluid">
   <div class="page-header">
-    <%= link_to 'New Episode', new_episode_path, :class=>"btn btn-success pull-right" %>
+    <%= link_to 'New Episode', new_episode_path, :class=>"btn btn-default btn-round2 pull-right" %>
     <h3>Todos los episodios</h3>
   </div><!-- page-header -->
 </div><!-- container-fluid -->
@@ -18,9 +18,9 @@
             <h3><%= episode.name %></h3>
             
             <ul class="list-inline">
-              <li><%= link_to 'Show', episode, :class=>"btn btn-primary" %></li>
-              <li><%= link_to 'Edit', edit_episode_path(episode), :class=>"btn btn-primary" %></li>
-              <li><%= link_to 'Destroy', episode, method: :delete, data: { confirm: 'Are you sure?' }, :class=>"btn btn-primary" %></li>
+              <li><%= link_to 'Show', episode, :class=>"btn btn-default" %></li>
+              <li><%= link_to 'Edit', edit_episode_path(episode), :class=>"btn btn-default" %></li>
+              <li><%= link_to 'Destroy', episode, method: :delete, data: { confirm: 'Are you sure?' }, :class=>"btn btn-default" %></li>
             </ul>
           </div><!-- caption -->
         </div><!-- end of thumbnail -->

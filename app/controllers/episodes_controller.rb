@@ -4,7 +4,17 @@ class EpisodesController < ApplicationController
   # GET /episodes
   # GET /episodes.json
   def index
-    @episodes = Episode.all
+    # @episodes = Episode.all
+    if params[:q]
+      search_term = params[:q]
+      if Rails.env.development?
+        @episodes = Episode.where("name LIKE ?", "%#{search_term}%")
+      else
+        @episodes = Episode.where("name ILIKE ?", "%#{search_term}%")
+      end
+    else
+      @episodes = Episode.all
+    end
   end
 
   # GET /episodes/1
