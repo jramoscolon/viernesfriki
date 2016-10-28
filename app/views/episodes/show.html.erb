@@ -18,6 +18,11 @@
 			<img class="img-responsive" src=<%= @episode.image_url %>/>
 		</div>
 	</div><!-- row -->
+	<div class="row">
+		<div class="col-md-6 embed-player">
+			<p><%= @episode.soundcloudembed.html_safe %></p>
+		</div>
+	</div><!-- end row -->
 </div><!-- container-fluid -->
 
 <div class="container">
