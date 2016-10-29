@@ -53,31 +53,29 @@
 <div class="container" id="contacto">
 	<h2 class="page-header home-header">Contacto</h2>
 	<p class="lead">¿Quieres decirnos “hola”? O tal vez tengas un comentario que quieras hacer sobre uno de nuestros episodios del Podcast. Entonces, llena el formulario abajo y dinos lo que está en tu mente. No te prometemos una respuesta, pero será muy divertido para nosotros leer lo que opinas.</p>
-	<%= form_tag("/static_pages/thank_you") do %>
+	<form>
 		<div class="row">
 			<div class="col-md-6">
 				<div class="form-group">
-					<%= label_tag :name, "Nombre" %>
-					<%= text_field_tag :name, nil, class: "form-control", placeholder: "Introduce tu nombre" %>
-				</div>
+					<label for="inputName">Nombre</label>
+					<input type="text" class="form-control" id="inputName" placeholder="Nombre">
+				</div><!-- form-group -->
 			</div><!-- col-md-6 -->
 
 			<div class="col-md-6">
 				<div class="form-group">
-					<%= label_tag :email, "Correo electrónico" %>
-					<%= text_field_tag :email, nil, class: "form-control", placeholder: "Introduce tu correo electrónico" %>
-				</div>
+					<label for="inputEmail">Email Address</label>
+					<input type="email" class="form-control" id="inputEmail" placeholder="Email">
+				</div><!-- form-group -->
 			</div><!-- col-md-6 -->
 		</div><!-- row -->
 
 		<div class="form-group">
-			<div class="form-group">
-				<%= label_tag :message, "Mensaje" %>
-				<%= text_area_tag :message, nil, class: "form-control", placeholder: "Escribe tu mensaje" %>
-			</div>
+			<label for="comment">Comentario:</label>
+				<textarea class="form-control" rows="5" id="comment" placeholder="Comentario"></textarea>
 		</div><!-- form-group -->
 
-		<%= submit_tag "Enviar", class: "btn btn-default btn-round submit-bottom" %>
-	<% end %>
+		<button type="submit" class="btn btn-default btn-round submit-bottom">Submit</button>
+	</form>
 	
 </div><!-- container-fluid -->
