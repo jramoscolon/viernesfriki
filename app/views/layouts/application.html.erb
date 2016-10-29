@@ -42,12 +42,26 @@
 						<li><a href="/static_pages/index/#team">El "Team"</a></li>
 						<li><a href="/episodes">El "Show"</a></li>
 						<li><a href="/static_pages/index/#contacto">Contacto</a></li>
+						<li>
+						  <% if user_signed_in? %>
+						    <%= link_to('Logout', destroy_user_session_path, :method => :delete) %>
+						  <% else %>
+						    <%= link_to('Login', new_user_session_path) %>
+						  <% end %>
+						</li>
 					</ul>
 				</div><!-- Navbar-collapse collapse -->
 
 			</div><!-- container-fluid" -->
 		</nav>
 	</header>
+
+	<% if notice %>
+		<div class="alert alert-info no-bottom" role="alert"><%= notice %></div>
+		<% end %>
+	<% if alert %>
+		<div class="alert alert-danger no-bottom" role="alert"><%= alert %></div>
+	<% end %>
 
 <%= yield %>
 
