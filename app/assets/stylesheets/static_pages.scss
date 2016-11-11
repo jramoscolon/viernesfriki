@@ -38,10 +38,15 @@ h3 {
 	font-family: "bello-pro";
 	font-weight: 400;
 	font-size: 34px;
+
 }
 
 .navbar-inverse .navbar-brand {
-	color: yellow;
+	/* color: Gold; */
+	background: -webkit-linear-gradient(top,  #fceabb 0%,#fccd4d 50%,#eaac00 51%,#fbdf93 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+	
 }
 
 .navbar-inverse {
