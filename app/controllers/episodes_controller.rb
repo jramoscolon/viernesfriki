@@ -1,7 +1,8 @@
 class EpisodesController < ApplicationController
   # before_filter :authenticate_user!
   before_action :set_episode, only: [:show, :edit, :update, :destroy]
-  before_filter :authenticate_user!
+  before_filter :authenticate_user!, except: [:index, :show]
+
   
 
   # GET /episodes
