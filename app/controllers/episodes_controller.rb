@@ -25,6 +25,7 @@ class EpisodesController < ApplicationController
   # GET /episodes/1
   # GET /episodes/1.json
   def show
+    @episodes = Episode.order("created_at DESC")
   end
 
   # GET /episodes/new
