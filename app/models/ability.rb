@@ -7,7 +7,14 @@ def initialize(user)
     if user.admin?
         can :manage, :all
     else
-        can :read, :all
+        can :read, :episodes
+        can :update, User do |u|
+        	u.id == user.id
+        end
+        can :show, User do |u|
+        	u.id == user.id
+        end
+
     end
   end
 

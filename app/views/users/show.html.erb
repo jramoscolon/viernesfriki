@@ -1,14 +1,33 @@
-<p id="notice"><%= notice %></p>
+<div class="container-fluid" align="center">
+	<p id="notice"><%= notice %></p>
+	<div class="page-header">
+		<h2>Welcome to <%= @user.first_name %>'s Page</h2>
+	</div><!-- Page-header -->
 
-<p>
-  <strong>First name:</strong>
-  <%= @user.first_name %>
-</p>
+	<div>
+		<%= gravatar_for @user, size: 150 %>
+	</div>
+	<p>
+	  <strong>First name:</strong>
+	  <%= @user.first_name %>
+	</p>
 
-<p>
-  <strong>Last name:</strong>
-  <%= @user.last_name %>
-</p>
+	<p>
+	  <strong>Last name:</strong>
+	  <%= @user.last_name %>
+	</p>
 
-<%= link_to 'Edit', edit_user_path(@user) %> |
-<%= link_to 'Back', users_path %>
+	<p>
+		<strong>Email:</strong>
+		<%= @user.email %>
+	</p>
+
+	<%= link_to 'Edit', edit_user_path(@user), :class => "btn btn-default" %>
+	<% if can? :manage, @user %>
+		<%= link_to 'Back', users_path, :class => "btn btn-default" %>
+	<% else %>
+		<%= link_to 'Back', episodes_path, :class => "btn btn-default" %>
+	<% end %>
+</div><!-- Container-fluid -->
+
+

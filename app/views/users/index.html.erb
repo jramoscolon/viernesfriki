@@ -1,8 +1,10 @@
-<p id="notice"><%= notice %></p>
+<div class="container-fluid">
+  <p id="notice"><%= notice %></p>
+  <div class="page-header">
+    <h2>Listing Users</h2>
+  </div><!-- Page-header -->
 
-<h1>Listing Users</h1>
-
-<table>
+<table class="table table-hover">
   <thead>
     <tr>
       <th>First name</th>
@@ -26,4 +28,7 @@
 
 <br>
 
-<%= link_to 'New User', new_user_path %>
+<%= link_to 'New User', new_user_path, :class => "btn btn-default" %>
+
+</div><!-- Container-fluid -->
+
