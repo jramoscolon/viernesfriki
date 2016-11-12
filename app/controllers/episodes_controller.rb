@@ -18,14 +18,15 @@ class EpisodesController < ApplicationController
         @episodes = Episode.where("name ILIKE ?", "%#{search_term}%")
       end
     else
-      @episodes = Episode.all
+      @episodes = Episode.order(:name)
     end
   end
 
   # GET /episodes/1
   # GET /episodes/1.json
   def show
-    Episode.order(:name)
+
+
   end
 
   # GET /episodes/new
