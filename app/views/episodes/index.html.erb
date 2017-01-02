@@ -1,5 +1,62 @@
 <p id="notice"><%= notice %></p>
 
+<!-- Pasted the header from the Application html next -->
+<header>
+    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+      <div class="container-fluid">
+        <div class="navbar-header" id="brand">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand lg-logo" href="/">
+            <%= image_tag("vf_logo.png", :alt => "VF Logo") %>
+          </a>
+          <a class="navbar-brand sm-logo" href="/">
+            <%= image_tag("VF_logo_horizontal.png", :alt => "VF Logo") %>
+          </a>
+        </div><!-- navbar-header -->
+
+        <div class="navbar-collapse collapse">
+          <!-- Add a search field -->
+          <%= form_tag("/episodes", method: "get") do %>
+            <div class="navbar-form navbar-right" role="search">
+              <div class="form-group search-box">
+                <!-- <%= label_tag(:q, "Search for:") %> -->
+                <%= text_field_tag :q, "", class: "form-control search-mod" %>
+                <%= submit_tag("Search", class: "form-control search-mod") %>
+              </div>
+            </div>
+          <% end %>
+          <ul class="nav navbar-nav navbar-right">
+            <li><a href="/static_pages/index/#team">El "Team"</a></li>
+            <li><a href="/episodes">El "Show"</a></li>
+            <li><a href="/static_pages/index/#contacto">Contacto</a></li>
+            <% if user_signed_in? %>
+              <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Your Profile <%= "Admin" if current_user.admin? %><span class="caret"></span></a>
+                <ul class="dropdown-menu">
+                  <li><%= link_to "Edit your profile", edit_user_path(current_user) %></li>
+                  <li><%= link_to "View your profile", user_path(current_user) %></li>
+                  <% if can? :show, @user %>
+                  <li role="separator" class="divider"></li>
+                  <li><%= link_to 'Users', users_path %></li>
+                  <% end %>
+                </ul>
+              </li>
+              <li><%= link_to('Logout', destroy_user_session_path, :method => :delete) %></li>
+            <% else %>
+                <li><%= link_to('Login', new_user_session_path) %></li>
+              
+            <% end %>
+          </ul>
+        </div><!-- Navbar-collapse collapse -->
+
+      </div><!-- container-fluid" -->
+    </nav>
+  </header>
 
 <div class="container-fluid">
   <div class="page-header">

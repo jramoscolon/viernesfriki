@@ -68,11 +68,12 @@ h3 {
 @media only screen and (min-width: 768px) {
 	.sm-logo {
 		display: none;
-	}
-
-	.navbar-brand {
 		padding: 3px;
 	}
+
+	//.navbar-brand {
+	//	padding: 3px;
+	//}
 }
 
 @media only screen and (max-width: 767px) {
@@ -80,7 +81,7 @@ h3 {
 		display: none;
 	}
 
-	.navbar-brand {
+	.sm-logo {
 		padding: 3px;
 	}
 }
