@@ -216,3 +216,10 @@ h3 {
     /*height:780px;*/
   
   }
+
+  @media (max-width: 815px) {
+
+   .search-box {
+   	   display: none !important;
+   }
+}

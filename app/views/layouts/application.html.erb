@@ -35,7 +35,7 @@
 					<!-- Add a search field -->
 					<%= form_tag("/episodes", method: "get") do %>
 						<div class="navbar-form navbar-right" role="search">
-							<div class="form-group">
+							<div class="form-group search-box">
 								<!-- <%= label_tag(:q, "Search for:") %> -->
 								<%= text_field_tag :q, "", class: "form-control search-mod" %>
 								<%= submit_tag("Search", class: "form-control search-mod") %>
