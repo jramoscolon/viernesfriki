@@ -68,7 +68,8 @@
 		</div><!-- descripcion -->
 
 		<div class="col-md-6">
-			<img class="img-responsive" src=<%= @episode.image_url %>/>
+			<!-- <img class="img-responsive" src=<%= @episode.image_url %>/> -->
+			<%= image_tag(@episode.image_url, class: "img-responsive") %>
 		</div>
 	</div><!-- row -->
 	<div class="row">
