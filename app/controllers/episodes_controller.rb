@@ -25,8 +25,7 @@ class EpisodesController < ApplicationController
   # GET /episodes/1
   # GET /episodes/1.json
   def show
-
-
+    @comments = @episode.comments.order("created_at DESC").paginate(:page => params[:page], :per_page => 5)
   end
 
   # GET /episodes/new

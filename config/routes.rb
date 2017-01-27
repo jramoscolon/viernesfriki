@@ -1,7 +1,9 @@
 Rails.application.routes.draw do
   devise_for :users
   resources :users
-  resources :episodes
+  resources :episodes do
+    resources :comments
+  end
   get 'static_pages/index'
   post 'static_pages/thank_you'
 
