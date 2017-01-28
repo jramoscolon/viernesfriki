@@ -1,4 +1,5 @@
 <% if signed_in? %>
+  <hr>
   <h4>Add a Review:</h4>
   <%= form_for([@episode, @episode.comments.build]) do |f| %>
     <div class="form-group">
