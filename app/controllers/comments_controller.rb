@@ -18,6 +18,10 @@ class CommentsController < ApplicationController
 	end
 
 	def destroy
+		@comment = Comment.find(params[:id])
+		episode = @comment.episode
+		@comment.destroy
+		redirect_to episode
 	end
 
 	private
