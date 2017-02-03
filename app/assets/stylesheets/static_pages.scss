@@ -8,20 +8,6 @@ body {
   position: relative;
 }
 
-/* a {
-	color: DeepSkyBlue;
-	border-bottom: 1px solid;
-}
-
-a:visited {
-	color: LightSkyBlue;
-}
-
-a:hover {
-	color: DodgerBlue;
-	border: none;
-} /*
-
 h2 {
 	font-family: 'Lato', sans-serif;
 	text-transform: uppercase;
@@ -243,4 +229,20 @@ h3 {
    .search-box {
    	   display: none !important;
    }
+}
+
+/* Episode Show page link styles */
+#show-page a {
+	color: DodgerBlue;
+	
+}
+
+#show-page a:visited {
+	color: LightSkyBlue;
+	border-bottom: 1px solid;
+}
+
+#show-page a:hover {
+	color: DeepSkyBlue;
+	border: none;
 }
