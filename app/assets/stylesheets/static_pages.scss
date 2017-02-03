@@ -8,6 +8,20 @@ body {
   position: relative;
 }
 
+a {
+	color: DeepSkyBlue;
+	border-bottom: 1px solid;
+}
+
+a:visited {
+	color: LightSkyBlue;
+}
+
+a:hover {
+	color: DodgerBlue;
+	border: none;
+}
+
 h2 {
 	font-family: 'Lato', sans-serif;
 	text-transform: uppercase;
